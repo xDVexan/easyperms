@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="EasyPerms:jar">
+    <output-path>$PROJECT_DIR$/../TestServer1.8/plugins</output-path>
+    <root id="archive" name="EasyPerms.jar">
+      <element id="module-output" name="EasyPerms" />
+    </root>
+  </artifact>
+</component>
