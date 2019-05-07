@@ -1,0 +1,6 @@
+Groups:
+  member:
+    permissions:
+      - modifyworld.blockbreak
+
+Users:

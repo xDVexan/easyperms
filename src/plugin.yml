@@ -1,0 +1,17 @@
+main: me.featureable.easyperms.EasyPerms
+name: EasyPerms
+version: 1.0
+author: Featureable
+description: Easy Perms
+website: www.featureable.cf
+
+commands:
+  testperm:
+    description: Test
+  ep:
+      description: Test
+
+permissions:
+   modifyworld.blockbreak:
+      description: This permission allows a player to break a block.
+      default: op
