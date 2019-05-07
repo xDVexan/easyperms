@@ -1,6 +1,7 @@
 package me.featureable.easyperms.commands;
 
 import me.featureable.easyperms.EasyPerms;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -33,6 +34,18 @@ public class EasyPermsCommand implements CommandExecutor {
                     break;
                 default:
                     sender.sendMessage(plugin.epheader + ChatColor.RED + " Unknown command. Please use /ep help for further assistance.");
+                    break;
+            }
+        }
+
+        if (args.length == 2) {
+            switch (args[0].toLowerCase()) {
+                case "user":
+                    if (Bukkit.getServer().getOnlinePlayers().contains(Bukkit.getPlayer(args[1]))) {
+                        sender.sendMessage("Player online.");
+                    } else {
+                        sender.sendMessage("That player is not online.");
+                    }
                     break;
             }
         }
