@@ -20,7 +20,7 @@ public class EasyPermsCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (args.length == 0) {
-            sender.sendMessage(plugin.epheader + ChatColor.RED + " Please use /ep help for further assistance.");
+            sender.sendMessage("test");
             return true;
         }
 
@@ -41,7 +41,7 @@ public class EasyPermsCommand implements CommandExecutor {
         if (args.length == 2) {
             switch (args[0].toLowerCase()) {
                 case "user":
-                    //Retrieve data for user
+                    plugin.
                     break;
             }
         }
