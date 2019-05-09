@@ -41,7 +41,7 @@ public class EasyPermsCommand implements CommandExecutor {
         if (args.length == 2) {
             switch (args[0].toLowerCase()) {
                 case "user":
-                    plugin.
+                    plugin
                     break;
             }
         }
