@@ -41,11 +41,7 @@ public class EasyPermsCommand implements CommandExecutor {
         if (args.length == 2) {
             switch (args[0].toLowerCase()) {
                 case "user":
-                    if (Bukkit.getServer().getOnlinePlayers().contains(Bukkit.getPlayer(args[1]))) {
-                        sender.sendMessage("Player online.");
-                    } else {
-                        sender.sendMessage("That player is not online.");
-                    }
+                    plugin.
                     break;
             }
         }
