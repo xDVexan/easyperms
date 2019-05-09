@@ -20,7 +20,7 @@ public class EasyPermsCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (args.length == 0) {
-            sender.sendMessage("test");
+            sender.sendMessage(plugin.epheader + ChatColor.RED + " Please use /ep help for further assistance.");
             return true;
         }
 
@@ -41,11 +41,7 @@ public class EasyPermsCommand implements CommandExecutor {
         if (args.length == 2) {
             switch (args[0].toLowerCase()) {
                 case "user":
-                    if (Bukkit.getServer().getOnlinePlayers().contains(Bukkit.getPlayer(args[1]))) {
-                        sender.sendMessage("Player online.");
-                    } else {
-                        sender.sendMessage("That player is not online.");
-                    }
+                    //Retrieve data for user
                     break;
             }
         }
