@@ -7,6 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e928624-aa7c-4e2a-8d21-2345f5e6092d" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/me/featureable/easyperms/EasyPerms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/featureable/easyperms/EasyPerms.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/me/featureable/easyperms/commands/EasyPermsCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/me/featureable/easyperms/commands/EasyPermsCommand.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EasyPerms.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EasyPerms.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/me/featureable/easyperms/EasyPerms.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1836">
-              <caret line="108" column="5" selection-start-line="108" selection-start-column="5" selection-end-line="108" selection-end-column="5" />
+            <state relative-caret-position="481">
+              <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -31,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EasyPermsCommand.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EasyPermsCommand.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/featureable/easyperms/commands/EasyPermsCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="655">
-              <caret line="43" column="26" lean-forward="true" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+            <state relative-caret-position="536">
+              <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,7 +47,7 @@
       <file leaf-file-name="TestPlayerPermCommand.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/featureable/easyperms/commands/TestPlayerPermCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="175">
               <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -58,8 +59,8 @@
       <file leaf-file-name="plugin.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/plugin.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+            <state relative-caret-position="187">
+              <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -93,9 +94,9 @@
         <option value="$PROJECT_DIR$/src/me/featureable/easyperms/listeners/PlayerJoinListener.java" />
         <option value="$PROJECT_DIR$/src/config.yml" />
         <option value="$PROJECT_DIR$/src/me/featureable/easyperms/commands/TestPlayerPermCommand2.java" />
-        <option value="$PROJECT_DIR$/src/me/featureable/easyperms/EasyPerms.java" />
         <option value="$PROJECT_DIR$/src/plugin.yml" />
         <option value="$PROJECT_DIR$/src/me/featureable/easyperms/commands/EasyPermsCommand.java" />
+        <option value="$PROJECT_DIR$/src/me/featureable/easyperms/EasyPerms.java" />
       </list>
     </option>
   </component>
@@ -275,12 +276,12 @@
       <workItem from="1557186853881" duration="2082000" />
       <workItem from="1557190382895" duration="820000" />
       <workItem from="1557196468889" duration="916000" />
-      <workItem from="1557443544322" duration="700000" />
+      <workItem from="1557443544322" duration="5076000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30776000" />
+    <option name="totallyTimeSpent" value="35152000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -288,6 +289,7 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info active="true" anchor="bottom" id="Messages" order="7" visible="true" weight="0.32943678" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -310,7 +312,6 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Messages" order="7" visible="true" weight="0.32943678" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -581,7 +582,7 @@
     <entry file="file://$PROJECT_DIR$/src/me/featureable/easyperms/commands/TestPlayerPermCommand2.java" />
     <entry file="file://$PROJECT_DIR$/src/me/featureable/easyperms/commands/TestPlayerPermCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="175">
           <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -591,25 +592,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/plugin.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        <state relative-caret-position="187">
+          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/featureable/easyperms/EasyPerms.java">
+    <entry file="file://$PROJECT_DIR$/src/me/featureable/easyperms/commands/EasyPermsCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1836">
-          <caret line="108" column="5" selection-start-line="108" selection-start-column="5" selection-end-line="108" selection-end-column="5" />
+        <state relative-caret-position="536">
+          <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/me/featureable/easyperms/commands/EasyPermsCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/me/featureable/easyperms/EasyPerms.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="655">
-          <caret line="43" column="26" lean-forward="true" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+        <state relative-caret-position="481">
+          <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
