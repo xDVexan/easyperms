@@ -111,22 +111,17 @@ public class EasyPerms extends JavaPlugin {
         }
     }
 
-    public ArrayList<String> playersGroups(UUID uuid) {
-        ArrayList<String> playerPerms = new ArrayList<>();
+    public void getPlayersGroups(CommandSender cmdsender, UUID uuid) {
+        PermissionAttachment attachment = this.playerPermissions.get(uuid);
+        permissionscfg = YamlConfiguration.loadConfiguration(permfile);
 
         for (String users : permissionscfg.getConfigurationSection("Users").getKeys(false)) {
             for (String usergroups : permissionscfg.getStringList("Users." + users + ".groups")) {
-                for (String permissions : permissionscfg.getStringList("Groups." + usergroups + ".permissions")) {
-                    playerPerms.add(permissions);
-                }
+                cmdsender.sendMessage(usergroups);
+//                for (String permissions : permissionscfg.getStringList("Groups." + usergroups + ".permissions")) {
+//                    cmdsender.sendMessage(permissions);
+//                }
             }
         }
-
-        for (int i = 0; i < playerPerms.size(); i++) {
-            Bukkit.getConsoleSender().sendMessage(playerPerms.get(i));
-            Bukkit.getConsoleSender().sendMessage("F" + i);
-            Bukkit.getPlayer("Featureable").kickPlayer("F");
-        }
-        return playerPerms;
     }
 }

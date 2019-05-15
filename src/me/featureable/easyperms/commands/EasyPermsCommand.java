@@ -6,6 +6,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
 
@@ -43,14 +44,13 @@ public class EasyPermsCommand implements CommandExecutor {
         if (args.length == 2) {
             switch (args[0].toLowerCase()) {
                 case "user":
-                    sender.sendMessage(plugin.epheader + ChatColor.RED + " User Info.");
+                    sender.sendMessage(plugin.epheader + ChatColor.RED + " User Info: " + args[1]);
                     ArrayList<String> playerPerms = new ArrayList<>();
-                    playerPerms = plugin.playersGroups(Bukkit.getPlayer(args[1]).getUniqueId());
-                    for (int i = 0; i < playerPerms.size(); i++) {
-                        Bukkit.getConsoleSender().sendMessage(playerPerms.get(i));
-                        Bukkit.getConsoleSender().sendMessage("F" + i);
-                        Bukkit.getPlayer("Featureable").kickPlayer("F");
-                    }
+                    Player targetPlayer = Bukkit.getPlayer(args[1]);
+                    plugin.getPlayersGroups(sender, targetPlayer.getUniqueId());
+//                    for (int i = 0; i < playerPerms.size(); i++) {
+//                        Bukkit.getConsoleSender().sendMessage(playerPerms.get(i));
+//                    }
                     break;
                 default:
                     sender.sendMessage(plugin.epheader + ChatColor.RED + " Unknown command. Please use /ep help for further assistance.");
