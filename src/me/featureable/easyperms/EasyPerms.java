@@ -109,6 +109,14 @@ public class EasyPerms extends JavaPlugin {
                 }
             }
         }
+
+        for (String users : permissionscfg.getConfigurationSection("Users").getKeys(false)) {
+            for (String userperms : permissionscfg.getStringList("Users." + users + ".permissions")) {
+                if (!attachment.getPermissions().containsValue(userperms)) {
+                    attachment.setPermission(userperms, true);
+                }
+            }
+        }
     }
 
     public void getPlayersGroups(CommandSender cmdsender, UUID uuid) {
@@ -121,6 +129,30 @@ public class EasyPerms extends JavaPlugin {
 //                for (String permissions : permissionscfg.getStringList("Groups." + usergroups + ".permissions")) {
 //                    cmdsender.sendMessage(permissions);
 //                }
+            }
+        }
+    }
+
+    public void getGroupsPerms(CommandSender cmdsender, UUID uuid) {
+        PermissionAttachment attachment = this.playerPermissions.get(uuid);
+        permissionscfg = YamlConfiguration.loadConfiguration(permfile);
+
+        for (String users : permissionscfg.getConfigurationSection("Users").getKeys(false)) {
+            for (String usergroups : permissionscfg.getStringList("Users." + users + ".groups")) {
+                for (String permissions : permissionscfg.getStringList("Groups." + usergroups + ".permissions")) {
+                    cmdsender.sendMessage(permissions);
+                }
+            }
+        }
+    }
+
+    public void getPlayersPerms(CommandSender cmdsender, UUID uuid) {
+        PermissionAttachment attachment = this.playerPermissions.get(uuid);
+        permissionscfg = YamlConfiguration.loadConfiguration(permfile);
+
+        for (String users : permissionscfg.getConfigurationSection("Users").getKeys(false)) {
+            for (String userperms : permissionscfg.getStringList("Users." + users + ".permissions")) {
+                cmdsender.sendMessage(userperms);
             }
         }
     }

@@ -45,12 +45,10 @@ public class EasyPermsCommand implements CommandExecutor {
             switch (args[0].toLowerCase()) {
                 case "user":
                     sender.sendMessage(plugin.epheader + ChatColor.RED + " User Info: " + args[1]);
-                    ArrayList<String> playerPerms = new ArrayList<>();
                     Player targetPlayer = Bukkit.getPlayer(args[1]);
                     plugin.getPlayersGroups(sender, targetPlayer.getUniqueId());
-//                    for (int i = 0; i < playerPerms.size(); i++) {
-//                        Bukkit.getConsoleSender().sendMessage(playerPerms.get(i));
-//                    }
+                    sender.sendMessage("");
+                    plugin.getPlayersPerms(sender, targetPlayer.getUniqueId());
                     break;
                 default:
                     sender.sendMessage(plugin.epheader + ChatColor.RED + " Unknown command. Please use /ep help for further assistance.");
