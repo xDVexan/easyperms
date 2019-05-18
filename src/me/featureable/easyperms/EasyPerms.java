@@ -11,6 +11,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.permissions.PermissionAttachment;
+import org.bukkit.permissions.PermissionAttachmentInfo;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
@@ -55,12 +56,19 @@ public class EasyPerms extends JavaPlugin {
         new PlayerLeaveListener(this);
         new TestPlayerPermCommand(this);
         new EasyPermsCommand(this);
-        refreshAllConfigs();
+        permissionscfg = YamlConfiguration.loadConfiguration(permfile);
+
+        for (Player player : Bukkit.getServer().getOnlinePlayers()) {
+            setupPermissions(player);
+        }
     }
 
     @Override
     public void onDisable() {
-
+        for (Player player : Bukkit.getServer().getOnlinePlayers()) {
+            removeAllPlayersPerms(player);
+        }
+        playerPermissions.clear();
     }
 
     public FileConfiguration getCustomConfig() {
@@ -112,20 +120,18 @@ public class EasyPerms extends JavaPlugin {
 
         for (String users : permissionscfg.getConfigurationSection("Users").getKeys(false)) {
             for (String userperms : permissionscfg.getStringList("Users." + users + ".permissions")) {
-                if (!attachment.getPermissions().containsValue(userperms)) {
-                    attachment.setPermission(userperms, true);
-                }
+                attachment.setPermission(userperms, true);
             }
         }
     }
 
-    public void getPlayersGroups(CommandSender cmdsender, UUID uuid) {
+    public void getPlayersGroups(CommandSender cmdsender, UUID uuid, String chatColor) {
         PermissionAttachment attachment = this.playerPermissions.get(uuid);
         permissionscfg = YamlConfiguration.loadConfiguration(permfile);
 
         for (String users : permissionscfg.getConfigurationSection("Users").getKeys(false)) {
             for (String usergroups : permissionscfg.getStringList("Users." + users + ".groups")) {
-                cmdsender.sendMessage(usergroups);
+                cmdsender.sendMessage(ChatColor.valueOf(chatColor) + usergroups);
             }
         }
     }
@@ -138,22 +144,27 @@ public class EasyPerms extends JavaPlugin {
         }
     }
 
-    public void getPlayersPerms(CommandSender cmdsender, UUID uuid) {
+    public void getPlayersPerms(CommandSender cmdsender, UUID uuid, String chatColor) {
         PermissionAttachment attachment = this.playerPermissions.get(uuid);
         permissionscfg = YamlConfiguration.loadConfiguration(permfile);
 
         for (String users : permissionscfg.getConfigurationSection("Users").getKeys(false)) {
             for (String userperms : permissionscfg.getStringList("Users." + users + ".permissions")) {
-                cmdsender.sendMessage(userperms);
+                cmdsender.sendMessage(ChatColor.valueOf(chatColor) + userperms);
             }
         }
     }
 
     public void refreshAllConfigs() {
-        permissionscfg = YamlConfiguration.loadConfiguration(permfile);
         for (Player player : Bukkit.getServer().getOnlinePlayers()) {
-            playerPermissions.remove(player.getUniqueId());
+            removeAllPlayersPerms(player);
+
             setupPermissions(player);
         }
+    }
+
+    public void removeAllPlayersPerms(Player player) {
+        PermissionAttachment attachment = this.playerPermissions.get(player.getUniqueId());
+        player.removeAttachment(attachment);
     }
 }
