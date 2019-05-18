@@ -33,6 +33,10 @@ public class EasyPermsCommand implements CommandExecutor {
                 case "help":
                     sender.sendMessage(plugin.epheader + ChatColor.RED + ChatColor.BOLD + " HELP");
                     break;
+                case "reload":
+                    plugin.refreshAllConfigs();
+                    sender.sendMessage(plugin.epheader + ChatColor.RED + " Reloaded the config files.");
+                    break;
                 default:
                     sender.sendMessage(plugin.epheader + ChatColor.RED + " Unknown command. Please use /ep help for further assistance.");
                     break;

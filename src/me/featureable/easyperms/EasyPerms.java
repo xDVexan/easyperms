@@ -23,6 +23,7 @@ import java.util.UUID;
 public class EasyPerms extends JavaPlugin {
 
     File configFile = new File(this.getDataFolder(), "config.yml");
+    File configFileLoc = new File(this.getDataFolder(), "config.yml");
 
     FileConfiguration permissionscfg = null;
     File permfile = null;
@@ -54,7 +55,6 @@ public class EasyPerms extends JavaPlugin {
         new PlayerLeaveListener(this);
         new TestPlayerPermCommand(this);
         new EasyPermsCommand(this);
-        new EasyPermsReloadCommand(this);
         refreshAllConfigs();
     }
 
