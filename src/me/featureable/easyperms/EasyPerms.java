@@ -126,23 +126,15 @@ public class EasyPerms extends JavaPlugin {
         for (String users : permissionscfg.getConfigurationSection("Users").getKeys(false)) {
             for (String usergroups : permissionscfg.getStringList("Users." + users + ".groups")) {
                 cmdsender.sendMessage(usergroups);
-//                for (String permissions : permissionscfg.getStringList("Groups." + usergroups + ".permissions")) {
-//                    cmdsender.sendMessage(permissions);
-//                }
             }
         }
     }
 
-    public void getGroupsPerms(CommandSender cmdsender, UUID uuid) {
-        PermissionAttachment attachment = this.playerPermissions.get(uuid);
+    public void getGroupsPerms(CommandSender cmdsender, String group) {
         permissionscfg = YamlConfiguration.loadConfiguration(permfile);
 
-        for (String users : permissionscfg.getConfigurationSection("Users").getKeys(false)) {
-            for (String usergroups : permissionscfg.getStringList("Users." + users + ".groups")) {
-                for (String permissions : permissionscfg.getStringList("Groups." + usergroups + ".permissions")) {
-                    cmdsender.sendMessage(permissions);
-                }
-            }
+        for (String groupperms : permissionscfg.getStringList("Groups." + group + ".permissions")) {
+            cmdsender.sendMessage(groupperms);
         }
     }
 

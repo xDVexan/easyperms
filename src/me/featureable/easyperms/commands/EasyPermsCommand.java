@@ -50,8 +50,14 @@ public class EasyPermsCommand implements CommandExecutor {
                     sender.sendMessage("");
                     plugin.getPlayersPerms(sender, targetPlayer.getUniqueId());
                     break;
+                case "group":
+                    sender.sendMessage(plugin.epheader + ChatColor.RED + " Group Info: " + args[1]);
+                    String targetGroup = args[1];
+                    plugin.getGroupsPerms(sender, targetGroup);
+                    break;
                 default:
                     sender.sendMessage(plugin.epheader + ChatColor.RED + " Unknown command. Please use /ep help for further assistance.");
+                    break;
             }
         }
 
