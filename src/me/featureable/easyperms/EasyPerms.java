@@ -6,7 +6,6 @@ import me.featureable.easyperms.commands.*;
 import me.featureable.easyperms.listeners.*;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -18,7 +17,6 @@ import java.io.File;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.UUID;
 
@@ -56,6 +54,8 @@ public class EasyPerms extends JavaPlugin {
         new PlayerLeaveListener(this);
         new TestPlayerPermCommand(this);
         new EasyPermsCommand(this);
+        new EasyPermsReloadCommand(this);
+        refreshAllConfigs();
     }
 
     @Override
@@ -146,6 +146,14 @@ public class EasyPerms extends JavaPlugin {
             for (String userperms : permissionscfg.getStringList("Users." + users + ".permissions")) {
                 cmdsender.sendMessage(userperms);
             }
+        }
+    }
+
+    public void refreshAllConfigs() {
+        permissionscfg = YamlConfiguration.loadConfiguration(permfile);
+        for (Player player : Bukkit.getServer().getOnlinePlayers()) {
+            playerPermissions.remove(player.getUniqueId());
+            setupPermissions(player);
         }
     }
 }

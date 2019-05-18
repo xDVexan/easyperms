@@ -22,12 +22,13 @@ public class TestPlayerPermCommand implements CommandExecutor {
             return true;
         }
 
+        plugin.refreshAllConfigs();
         Player player = (Player) sender;
-        if (player.hasPermission("modifyworld.blockbreak")) {
-            player.sendMessage("HAVE PERM");
-        } else {
-            player.sendMessage("DONT HAVE PERM");
-        }
+//        if (player.hasPermission("modifyworld.blockbreak")) {
+//            player.sendMessage("HAVE PERM");
+//        } else {
+//            player.sendMessage("DONT HAVE PERM");
+//        }
         return true;
     }
 }
