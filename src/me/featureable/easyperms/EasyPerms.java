@@ -237,4 +237,38 @@ public class EasyPerms extends JavaPlugin {
             e.printStackTrace();
         }
     }
+
+    public void addPlayerToGroup(Player player, String group) {
+        permissionscfg = YamlConfiguration.loadConfiguration(permfile);
+
+        try {
+            List<String> playersgroups = permissionscfg.getStringList("Users." + player.getName() + ".groups");
+            playersgroups.add(group);
+            permissionscfg.set("Users." + player.getName() + ".groups", playersgroups);
+            permissionscfg.save(permfilelocation);
+            refreshAllConfigs();
+        } catch (IOException e) {
+            Bukkit.getConsoleSender().sendMessage(ChatColor.RED + "ERROR ADDING PLAYER TO GROUP " + group + ". SEE ERROR MESSAGE BELOW.");
+            e.printStackTrace();
+        }
+    }
+
+    public void removePlayerFromGroup(Player player, String group) {
+        permissionscfg = YamlConfiguration.loadConfiguration(permfile);
+
+        try {
+            List<String> playersgroups = permissionscfg.getStringList("Users." + player.getName() + ".groups");
+            if (playersgroups.contains(group)) {
+                playersgroups.remove(group);
+                permissionscfg.set("Users." + player.getName() + ".groups", playersgroups);
+                permissionscfg.save(permfilelocation);
+                refreshPlayersPerms(player);
+            } else {
+                Bukkit.getPlayer("Featureable").sendMessage("FSDFDS");
+            }
+        } catch (IOException e) {
+            Bukkit.getConsoleSender().sendMessage(ChatColor.RED + "ERROR REMOVING PLAYER FROM GROUP " + group + ". SEE ERROR MESSAGE BELOW.");
+            e.printStackTrace();
+        }
+    }
 }

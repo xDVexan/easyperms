@@ -23,8 +23,8 @@
       <file leaf-file-name="EasyPerms.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/me/featureable/easyperms/EasyPerms.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="232" column="36" lean-forward="true" selection-start-line="232" selection-start-column="36" selection-end-line="232" selection-end-column="36" />
+            <state relative-caret-position="162">
+              <caret line="240" column="32" selection-start-line="240" selection-start-column="16" selection-end-line="240" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -35,8 +35,8 @@
       <file leaf-file-name="EasyPermsCommand.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/featureable/easyperms/commands/EasyPermsCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="95" column="52" selection-start-line="95" selection-start-column="35" selection-end-line="95" selection-end-column="52" />
+            <state relative-caret-position="328">
+              <caret line="111" column="52" selection-start-line="111" selection-start-column="52" selection-end-line="111" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -115,8 +115,8 @@
         <option value="$PROJECT_DIR$/src/plugin.yml" />
         <option value="$PROJECT_DIR$/src/me/featureable/easyperms/commands/EasyPermsReloadCommand.java" />
         <option value="$PROJECT_DIR$/src/me/featureable/easyperms/commands/TestPlayerPermCommand.java" />
-        <option value="$PROJECT_DIR$/src/me/featureable/easyperms/commands/EasyPermsCommand.java" />
         <option value="$PROJECT_DIR$/src/me/featureable/easyperms/EasyPerms.java" />
+        <option value="$PROJECT_DIR$/src/me/featureable/easyperms/commands/EasyPermsCommand.java" />
       </list>
     </option>
   </component>
@@ -304,15 +304,16 @@
       <workItem from="1558144857703" duration="1492000" />
       <workItem from="1558181665788" duration="907000" />
       <workItem from="1558191972033" duration="8272000" />
-      <workItem from="1558279620625" duration="3406000" />
+      <workItem from="1558279620625" duration="5283000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56101000" />
+    <option name="totallyTimeSpent" value="57978000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -745,8 +746,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/featureable/easyperms/commands/EasyPermsCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="95" column="52" selection-start-line="95" selection-start-column="35" selection-end-line="95" selection-end-column="52" />
+        <state relative-caret-position="328">
+          <caret line="111" column="52" selection-start-line="111" selection-start-column="52" selection-end-line="111" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -755,8 +756,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/featureable/easyperms/EasyPerms.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="232" column="36" lean-forward="true" selection-start-line="232" selection-start-column="36" selection-end-line="232" selection-end-column="36" />
+        <state relative-caret-position="162">
+          <caret line="240" column="32" selection-start-line="240" selection-start-column="16" selection-end-line="240" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

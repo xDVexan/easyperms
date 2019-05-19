@@ -103,6 +103,23 @@ public class EasyPermsCommand implements CommandExecutor {
             }
         }
 
+        if (args.length == 5) {
+            switch (args[0].toLowerCase()) {
+                case "user":
+                    if (args[2].equalsIgnoreCase("group")) {
+                        if (args[3].equalsIgnoreCase("add")) {
+                            sender.sendMessage(plugin.epheader + ChatColor.RED + " Added player " + args[1] + " to group '" + args[4] + "'.");
+                            plugin.addPlayerToGroup(Bukkit.getPlayer(args[1]), args[4]);
+                        }
+
+                        if (args[3].equalsIgnoreCase("remove")) {
+                            sender.sendMessage(plugin.epheader + ChatColor.RED + " Removed player " + args[1] + " from group '" + args[4] + "'.");
+                            plugin.removePlayerFromGroup(Bukkit.getPlayer(args[1]), args[4]);
+                        }
+                    }
+            }
+        }
+
         return true;
     }
 }
