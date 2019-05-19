@@ -14,11 +14,9 @@ import org.bukkit.permissions.PermissionAttachment;
 import org.bukkit.permissions.PermissionAttachmentInfo;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.io.File;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.io.UnsupportedEncodingException;
+import java.io.*;
 import java.util.HashMap;
+import java.util.List;
 import java.util.UUID;
 
 public class EasyPerms extends JavaPlugin {
@@ -163,8 +161,31 @@ public class EasyPerms extends JavaPlugin {
         }
     }
 
+    public void refreshPlayersPerms(Player player) {
+        removeAllPlayersPerms(player);
+
+        setupPermissions(player);
+    }
+
     public void removeAllPlayersPerms(Player player) {
         PermissionAttachment attachment = this.playerPermissions.get(player.getUniqueId());
         player.removeAttachment(attachment);
+    }
+
+    public void addPermToPlayer(Player player, String permission) {
+        PermissionAttachment attachment = this.playerPermissions.get(player.getUniqueId());
+        permissionscfg = YamlConfiguration.loadConfiguration(permfile);
+
+        //permissionscfg.set("Users." + player.getName() + ".permissions", permission);
+
+        try {
+            List<String> permissions = permissionscfg.getStringList("Users." + player.getName() + ".permissions");
+            permissions.add(permission);
+            permissionscfg.set("Users." + player.getName() + ".permissions", permissions);
+            permissionscfg.save(permfilelocation);
+            refreshPlayersPerms(player);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -70,7 +70,8 @@ public class EasyPermsCommand implements CommandExecutor {
                 case "user":
                     if (args[2].equalsIgnoreCase("add")) {
                         if (!args[3].equalsIgnoreCase("")) {
-                            sender.sendMessage("FDS");
+                            sender.sendMessage(plugin.epheader + ChatColor.RED + " Added permission '" + args[3] + "' to player " + args[1]);
+                            plugin.addPermToPlayer(Bukkit.getPlayer(args[1]), args[3]);
                         }
                     }
                     break;
