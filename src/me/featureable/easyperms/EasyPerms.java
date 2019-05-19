@@ -176,8 +176,6 @@ public class EasyPerms extends JavaPlugin {
         PermissionAttachment attachment = this.playerPermissions.get(player.getUniqueId());
         permissionscfg = YamlConfiguration.loadConfiguration(permfile);
 
-        //permissionscfg.set("Users." + player.getName() + ".permissions", permission);
-
         try {
             List<String> permissions = permissionscfg.getStringList("Users." + player.getName() + ".permissions");
             permissions.add(permission);
@@ -185,6 +183,57 @@ public class EasyPerms extends JavaPlugin {
             permissionscfg.save(permfilelocation);
             refreshPlayersPerms(player);
         } catch (IOException e) {
+            Bukkit.getConsoleSender().sendMessage(ChatColor.RED + "ERROR ADDING PERMISSION TO PLAYER " + player.getName() + ". SEE ERROR MESSAGE BELOW.");
+            e.printStackTrace();
+        }
+    }
+
+    public void removePermFromPlayer(Player player, String permission) {
+        PermissionAttachment attachment = this.playerPermissions.get(player.getUniqueId());
+        permissionscfg = YamlConfiguration.loadConfiguration(permfile);
+
+        try {
+            List<String> permissions = permissionscfg.getStringList("Users." + player.getName() + ".permissions");
+            if (permissions.contains(permission)) {
+                permissions.remove(permission);
+                permissionscfg.set("Users." + player.getName() + ".permissions", permissions);
+                permissionscfg.save(permfilelocation);
+                refreshPlayersPerms(player);
+            }
+        } catch (IOException e) {
+            Bukkit.getConsoleSender().sendMessage(ChatColor.RED + "ERROR REMOVING PERMISSION FROM PLAYER " + player.getName() + ". SEE ERROR MESSAGE BELOW.");
+            e.printStackTrace();
+        }
+    }
+
+    public void addPermToGroup(String group, String permission) {
+        permissionscfg = YamlConfiguration.loadConfiguration(permfile);
+
+        try {
+            List<String> permissions = permissionscfg.getStringList("Groups." + group + ".permissions");
+            permissions.add(permission);
+            permissionscfg.set("Groups." + group + ".permissions", permissions);
+            permissionscfg.save(permfilelocation);
+            refreshAllConfigs();
+        } catch (IOException e) {
+            Bukkit.getConsoleSender().sendMessage(ChatColor.RED + "ERROR ADDING PERMISSION TO PLAYER " + group + ". SEE ERROR MESSAGE BELOW.");
+            e.printStackTrace();
+        }
+    }
+
+    public void removePermFromGroup(String group, String permission) {
+        permissionscfg = YamlConfiguration.loadConfiguration(permfile);
+
+        try {
+            List<String> permissions = permissionscfg.getStringList("Groups." + group + ".permissions");
+            if (permissions.contains(permission)) {
+                permissions.remove(permission);
+                permissionscfg.set("Groups." + group + ".permissions", permissions);
+                permissionscfg.save(permfilelocation);
+                refreshAllConfigs();
+            }
+        } catch (IOException e) {
+            Bukkit.getConsoleSender().sendMessage(ChatColor.RED + "ERROR REMOVING PERMISSION FROM GROUP " + group + ". SEE ERROR MESSAGE BELOW.");
             e.printStackTrace();
         }
     }

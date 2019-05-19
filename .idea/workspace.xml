@@ -23,8 +23,8 @@
       <file leaf-file-name="EasyPerms.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/me/featureable/easyperms/EasyPerms.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="185" column="40" selection-start-line="185" selection-start-column="40" selection-end-line="185" selection-end-column="40" />
+            <state relative-caret-position="396">
+              <caret line="232" column="36" lean-forward="true" selection-start-line="232" selection-start-column="36" selection-end-line="232" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -35,8 +35,8 @@
       <file leaf-file-name="EasyPermsCommand.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/featureable/easyperms/commands/EasyPermsCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="73" column="85" selection-start-line="73" selection-start-column="85" selection-end-line="73" selection-end-column="85" />
+            <state relative-caret-position="481">
+              <caret line="95" column="52" selection-start-line="95" selection-start-column="35" selection-end-line="95" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -304,12 +304,12 @@
       <workItem from="1558144857703" duration="1492000" />
       <workItem from="1558181665788" duration="907000" />
       <workItem from="1558191972033" duration="8272000" />
-      <workItem from="1558279620625" duration="2478000" />
+      <workItem from="1558279620625" duration="3406000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55173000" />
+    <option name="totallyTimeSpent" value="56101000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -745,8 +745,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/featureable/easyperms/commands/EasyPermsCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="73" column="85" selection-start-line="73" selection-start-column="85" selection-end-line="73" selection-end-column="85" />
+        <state relative-caret-position="481">
+          <caret line="95" column="52" selection-start-line="95" selection-start-column="35" selection-end-line="95" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -755,8 +755,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/me/featureable/easyperms/EasyPerms.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="185" column="40" selection-start-line="185" selection-start-column="40" selection-end-line="185" selection-end-column="40" />
+        <state relative-caret-position="396">
+          <caret line="232" column="36" lean-forward="true" selection-start-line="232" selection-start-column="36" selection-end-line="232" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

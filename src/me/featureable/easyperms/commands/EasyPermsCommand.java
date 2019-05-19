@@ -70,8 +70,30 @@ public class EasyPermsCommand implements CommandExecutor {
                 case "user":
                     if (args[2].equalsIgnoreCase("add")) {
                         if (!args[3].equalsIgnoreCase("")) {
-                            sender.sendMessage(plugin.epheader + ChatColor.RED + " Added permission '" + args[3] + "' to player " + args[1]);
+                            sender.sendMessage(plugin.epheader + ChatColor.RED + " Added permission '" + args[3] + "' to player " + args[1] + ".");
                             plugin.addPermToPlayer(Bukkit.getPlayer(args[1]), args[3]);
+                        }
+                    }
+
+                    if (args[2].equalsIgnoreCase("remove")) {
+                        if (!args[3].equalsIgnoreCase("")) {
+                            sender.sendMessage(plugin.epheader + ChatColor.RED + " Removed permission '" + args[3] + "' from player " + args[1] + ".");
+                            plugin.removePermFromPlayer(Bukkit.getPlayer(args[1]), args[3]);
+                        }
+                    }
+                    break;
+                case "group":
+                    if (args[2].equalsIgnoreCase("add")) {
+                        if (!args[3].equalsIgnoreCase("")) {
+                            sender.sendMessage(plugin.epheader + ChatColor.RED + " Added permission '" + args[3] + "' to group " + args[1] + ".");
+                            plugin.addPermToGroup(args[1], args[3]);
+                        }
+                    }
+
+                    if (args[2].equalsIgnoreCase("remove")) {
+                        if (!args[3].equalsIgnoreCase("")) {
+                            sender.sendMessage(plugin.epheader + ChatColor.RED + " Removed permission '" + args[3] + "' from group " + args[1] + ".");
+                            plugin.removePermFromGroup(args[1], args[3]);
                         }
                     }
                     break;
